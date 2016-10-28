@@ -1,0 +1,205 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+@import "compass";
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700);
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* Space out content a bit */
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: rgb(173, 198, 230);
+}
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.marketing,
+.footer {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Custom page header */
+.header {
+  /* Make the masthead heading the same height as the navigation */
+  margin: 0 0 16px 0;
+  
+  .logo {
+    margin: 0 0 5px 0;
+    padding: 0;
+    color: #fff;
+    .sups {
+      position: relative;
+      top: -10px;
+    }
+    .title {
+      font-size: 2em;
+      small {
+        font-weight: normal;
+      }
+    }
+  }
+
+  .navbar {
+    @extend .g3;
+    margin: 0;
+    .active {
+      a {
+        @extend .g2
+      }
+    }
+  }
+}
+
+
+/* Custom page footer */
+.footer {
+  padding-top: 19px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  border-bottom: 1px solid #e5e5e5;
+
+  .btn {
+    font-size: 21px;
+    padding: 14px 24px;
+  }
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 40px 0;
+
+  p + h4 {
+    margin-top: 28px;
+  }
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 730px;
+  }
+
+  /* Remove the padding we set earlier */
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  /* Remove the bottom border on the jumbotron for visual effect */
+  .jumbotron {
+    border-bottom: 0;
+  }
+}
+
+
+.g1{ 
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: #2c2c2c; // Old browsers
+  @include filter-gradient(#2c2c2c, #131313, vertical); // IE6-9
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #2c2c2c 0%,#000000 31%,#131313 100%));
+  color: #fff;
+}
+
+.g2 {
+  // needs latest Compass, add '@import "compass"' to your scss
+  background-color: #4c4c4c; // Old browsers
+  @include filter-gradient(#4c4c4c, #131313, vertical); // IE6-8
+  $experimental-support-for-svg: true;
+  @include background-image(linear-gradient(top,  #4c4c4c 0%,#595959 12%,#666666 25%,#474747 39%,#2c2c2c 50%,#000000 51%,#111111 60%,#2b2b2b 76%,#1c1c1c 91%,#131313 100%));
+  color: #fff;
+}
+
+.g3 {
+     background-color: #ffffff;
+    @include filter-gradient(#ffffff, #f6f6f6, vertical);
+    @include background-image(linear-gradient(top,  #ffffff 0%,#f1f1f1 50%,#e1e1e1 51%,#f6f6f6 100%));
+    color: #666;
+}
+
+a.g1, a.g2 { color: #fff; }
+a.g1:hover, a.g2:hover { color: #ccc; }
+
+.black-box {
+  margin: 0 0 12px 0;
+  padding: 12px 0 18px 0;
+  
+  .panel {
+    color: #fff;
+    text-align: center;
+    background: none;
+    margin: 0;
+
+    .panel-heading {
+      color: #fff;
+      background: none;
+      font-size: 2em;
+      padding: 0;
+    }
+    .panel-icon {
+      margin: 10px 0 10px 0;
+    }
+    .panel-body {
+      padding: 0;
+    }
+    a.btn {
+      color: #fff;
+      margin-top: 10px;
+     }
+  }
+}
+
+.panel {
+  .panel-heading {
+    @extend .g3;
+  }
+  .panel-body {
+    header {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.media-list {
+  margin: -10px 0;
+  .media {
+    cursor: pointer;
+    margin: 2px -15px;
+    border-top: 1px dotted #ddd;
+    border-bottom: 1px dotted #ddd;
+  }
+  .media-object {
+    background: #ddd;
+    color: #999;
+    padding: 4px 10px;
+  }
+  .media-heading {
+    padding: 4px 0 0 0;
+  }
+  .active {
+    @extend .g2;
+    .media-object {
+      @extend .g2
+    }
+  }
+
+}
